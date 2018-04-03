@@ -2,6 +2,7 @@
 
 # compiled output
 /.next
+/build
 /dist
 /dist-server
 /tmp

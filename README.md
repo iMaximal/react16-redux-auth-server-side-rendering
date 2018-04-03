@@ -12,5 +12,6 @@ npm i
 ## Usage
 
 ````bash
-npm run dev
+npm run dev:build:server
+npm run dev:server
 ````
