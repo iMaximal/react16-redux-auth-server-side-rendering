@@ -1,4 +1,4 @@
-# React 16 + Redux + Auth + Next.js
+# React 16 + Redux + Auth + Server Side Rendering
 
 Simple example
 
