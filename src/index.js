@@ -14,10 +14,8 @@ app.get('/', (req, res) => {
     <html>
       <head></head>
       <body>
-      <div>
-        ${content}
-        <script src="bundle.js"></script>
-      </div>
+      <div id="app">${content}</div>
+      <script src="bundle.js"></script>
       </body>
     </html>
   `;
