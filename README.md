@@ -12,5 +12,5 @@ npm i
 ## Usage
 
 ````bash
-npm run dev:all
+npm run dev
 ````
