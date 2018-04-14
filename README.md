@@ -1,6 +1,8 @@
 # React 16 + Redux + Auth + Server Side Rendering
 
-Simple example
+Simple example.
+
+This code is not best practice, but this example is good for study.
 
 
 ## Install
