@@ -13,7 +13,7 @@ app.use('/api', proxy('http://react-ssr-api.heroruapp.com', {
   proxyReqOptDecorator(opts) {
     opts.header['x-forwarded-host'] = 'localhost:3000';
     return opts;
-  }
+  },
 }));
 app.use(express.static('public'));
 
