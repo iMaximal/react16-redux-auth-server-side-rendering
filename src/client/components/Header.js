@@ -1,29 +1,37 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
+import React from 'react'
+import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
 
 
-const Header = ({ auth }) => {
-  console.log('My auth status is ', auth); // todo
+const Header = ({auth}) => {
+  console.log('My auth status is ', auth) // todo
 
   const authButton = auth ? (
     <a href="/api/logout">Logout</a>
   ) : (
     <a href="/api/auth/google">Login</a>
-  );
+  )
 
   return (
-    <div>
-      <Link to="/">React SSR</Link>
-      <div>
-        <Link to="/users">Users</Link>
-        <Link to="/admins">Admins</Link>
-        {authButton}
+    <nav>
+      <div className="nav-wrapper">
+        <Link to="/" className="brand-logo">React SSR</Link>
+        <ul className="right">
+          <li>
+            <Link to="/users">Users</Link>
+          </li>
+          <li>
+            <Link to="/admins">Admins</Link>
+          </li>
+          <li>
+            {authButton}
+          </li>
+        </ul>
       </div>
-    </div>
-  );
-};
+    </nav>
+  )
+}
 
-const mapStateToProps = ({ auth }) => ({ auth });
+const mapStateToProps = ({auth}) => ({auth})
 
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps)(Header)
