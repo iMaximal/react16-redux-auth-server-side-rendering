@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchUsers} from '../client/actions/index';
+import { fetchUsers} from '../actions/index';
 
 class UsersListPage extends Component {
   componentDidMount() {
