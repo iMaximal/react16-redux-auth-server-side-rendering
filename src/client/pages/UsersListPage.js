@@ -11,22 +11,27 @@ class UsersListPage extends Component {
   renderUsers() {
     return this.props.users.map((user) => {
       return <li key={user.id}>{user.name}</li>;
-    })
+    });
+  }
+
+  head() {
+    return (
+      <Helmet>
+        <title>{`${this.props.users.length} Users Loaded`}</title>
+        <meta property="og:title" content="Users App" />
+      </Helmet>
+    );
   }
 
   render() {
     return (
       <div>
-        <Helmet>
-          <title>Users App</title>
-          <meta property="og:title" content="Users App" />
-        </Helmet>
+        {this.head()}
         Here's a list of users:
         <ul>{this.renderUsers()}</ul>
       </div>
-    )
+    );
   }
-
 }
 
 const mapStateToProps = (state) => {
